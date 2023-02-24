@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HealthAnim : MonoBehaviour
+public class HurtDraugr : MonoBehaviour
 {
-    [SerializeField] private UnityEvent myEvent;
+    [SerializeField] private UnityEvent hurtDraugr;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Draugr"))
+        if (collision.gameObject.CompareTag("Draugr"))
         {
-            myEvent.Invoke();
+            hurtDraugr.Invoke();
 
         }
     }
